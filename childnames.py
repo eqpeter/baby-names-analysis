@@ -102,7 +102,7 @@ def main():
   args = sys.argv[1:]
 
   if not args:
-    print('usage: childnames.py [--summaryfile] file [file ...]')
+    print('使用方法: childnames.py [--summaryfile] 檔案 [檔案 ...]')
     sys.exit(1)
 
   # 檢查是否有 --summaryfile 命令列選項參數，如果有則設定旗幟，
