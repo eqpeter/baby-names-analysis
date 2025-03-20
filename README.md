@@ -46,6 +46,29 @@ Abbie 685
 ...
 ```
 
+## 使用PowerShell檢索摘要文件數據
+在生成了`.summary`文件後，您可以使用PowerShell命令輕鬆檢索和分析數據：
+
+1. 在特定摘要文件中搜索某個名字的排名:
+```
+Select-String -Path baby2006.html.summary -Pattern 'Alex '
+```
+
+2. 在所有摘要文件中搜索某個名字的排名（可查看不同年份的排名變化）:
+```
+Select-String -Path *.summary -Pattern 'Alex '
+```
+
+3. 限制結果數量:
+```
+Select-String -Path *.summary -Pattern 'Alex ' | Select-Object -First 10
+```
+
+4. 查找特定排名區間的名字（例如前10名）:
+```
+Select-String -Path baby2008.html.summary -Pattern ' [1-9]$| 10$'
+```
+
 ## 數據來源
 美國社會安全局 (SSA) 嬰兒名字數據庫：https://www.ssa.gov/OACT/babynames/
 
