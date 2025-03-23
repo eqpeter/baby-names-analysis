@@ -69,6 +69,17 @@ Select-String -Path *.summary -Pattern 'Alex ' | Select-Object -First 10
 Select-String -Path baby2008.html.summary -Pattern ' [1-9]$| 10$'
 ```
 
+## 示例文件
+本倉庫包含以下示例文件：
+
+1. HTML原始數據文件（1990-2008年）：
+   - baby1990.html, baby1992.html, ... , baby2008.html
+
+2. 生成的摘要文件（方便查看和分析）：
+   - baby1990.html.summary, baby1992.html.summary, ... , baby2008.html.summary
+
+這些摘要文件是使用本工具從HTML原始數據中提取出的嬰兒名字排名信息，您可以直接查看這些文件，或者使用上述PowerShell命令進行數據分析。
+
 ## 數據來源
 美國社會安全局 (SSA) 嬰兒名字數據庫：https://www.ssa.gov/OACT/babynames/
 
